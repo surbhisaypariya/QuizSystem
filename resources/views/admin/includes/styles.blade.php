@@ -1,8 +1,16 @@
-<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('public/admin/img/apple-icon.png') }}">
-<link rel="icon" type="image/png" href="{{ asset('public/admin/img/favicon.png') }}">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-<!-- CSS Files -->
-<link href="{{ asset('public/admin/css/material-dashboard.css?v=2.1.0') }}" rel="stylesheet" />
-<!-- CSS Just for demo purpose, don't include it in your project -->
-<link href="{{ asset('public/admin/demo/demo.css') }}" rel="stylesheet" />
+<link rel="stylesheet" href="{{ asset('public/assets/vendors/feather/feather.css')}}">
+<link rel="stylesheet" href="{{ asset('public/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
+<link rel="stylesheet" href="{{ asset('public/assets/vendors/ti-icons/css/themify-icons.css') }}">
+<link rel="stylesheet" href="{{ asset('public/assets/vendors/typicons/typicons.css') }}">
+<link rel="stylesheet" href="{{ asset('public/assets/vendors/simple-line-icons/css/simple-line-icons.css') }}">
+<link rel="stylesheet" href="{{ asset('public/assets/vendors/css/vendor.bundle.base.css') }}">
+<!-- endinject -->
+<!-- Plugin css for this page -->
+<link rel="stylesheet" href="{{ asset('public/assets/js/select.dataTables.min.css') }}">
+<!-- End plugin css for this page -->
+<!-- inject:css -->
+<link rel="stylesheet" href="{{ asset('public/assets/css/vertical-layout-light/style.css') }}">
+<!-- endinject -->
+
+<link rel="stylesheet" href="{{ asset('public/assets/css/sweetalert.css') }}"> 
+<link rel="stylesheet" href="{{ asset('public/assets/datatable/dataTables.bootstrap4.min.css') }}">

@@ -1,73 +1,47 @@
 @extends('admin.app')
 
 @section('content')
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-      <div class="card card-stats">
-        <div class="card-header card-header-warning card-header-icon">
-          <div class="card-icon">
-            <i class="material-icons">content_copy</i>
-          </div>
-          <p class="card-category">Used Space</p>
-          <h3 class="card-title">49/50
-            <small>GB</small>
-          </h3>
-        </div>
-        <div class="card-footer">
-          <div class="stats">
-            <i class="material-icons text-warning">warning</i>
-            <a href="#pablo" class="warning-link">Get More Space...</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-      <div class="card card-stats">
-        <div class="card-header card-header-success card-header-icon">
-          <div class="card-icon">
-            <i class="material-icons">store</i>
-          </div>
-          <p class="card-category">Revenue</p>
-          <h3 class="card-title">$34,245</h3>
-        </div>
-        <div class="card-footer">
-          <div class="stats">
-            <i class="material-icons">date_range</i> Last 24 Hours
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-      <div class="card card-stats">
-        <div class="card-header card-header-danger card-header-icon">
-          <div class="card-icon">
-            <i class="material-icons">info_outline</i>
-          </div>
-          <p class="card-category">Fixed Issues</p>
-          <h3 class="card-title">75</h3>
-        </div>
-        <div class="card-footer">
-          <div class="stats">
-            <i class="material-icons">local_offer</i> Tracked from Github
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-      <div class="card card-stats">
-        <div class="card-header card-header-info card-header-icon">
-          <div class="card-icon">
-            <i class="fa fa-twitter"></i>
-          </div>
-          <p class="card-category">Followers</p>
-          <h3 class="card-title">+245</h3>
-        </div>
-        <div class="card-footer">
-          <div class="stats">
-            <i class="material-icons">update</i> Just Updated
-          </div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="home-tab">
+      <div class="tab-content tab-content-basic">
+        <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="statistics-details d-flex align-items-center justify-content-between">
+                <div>
+                  <p class="statistics-title">Bounce Rate</p>
+                  <h3 class="rate-percentage">32.53%</h3>
+                  <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>-0.5%</span></p>
+                </div>
+                <div>
+                  <p class="statistics-title">Page Views</p>
+                  <h3 class="rate-percentage">7,682</h3>
+                  <p class="text-success d-flex"><i class="mdi mdi-menu-up"></i><span>+0.1%</span></p>
+                </div>
+                <div>
+                  <p class="statistics-title">New Sessions</p>
+                  <h3 class="rate-percentage">68.8</h3>
+                  <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span></p>
+                </div>
+                <div class="d-none d-md-block">
+                  <p class="statistics-title">Avg. Time on Site</p>
+                  <h3 class="rate-percentage">2m:35s</h3>
+                  <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
+                </div>
+                <div class="d-none d-md-block">
+                  <p class="statistics-title">New Sessions</p>
+                  <h3 class="rate-percentage">68.8</h3>
+                  <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span></p>
+                </div>
+                <div class="d-none d-md-block">
+                  <p class="statistics-title">Avg. Time on Site</p>
+                  <h3 class="rate-percentage">2m:35s</h3>
+                  <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
+                </div>
+              </div>
+            </div>
+          </div> 
         </div>
       </div>
     </div>

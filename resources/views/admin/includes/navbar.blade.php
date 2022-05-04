@@ -1,31 +1,19 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
-    <div class="container-fluid">
-        <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">fortuna</a>
+<nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class="me-3">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+                <span class="icon-menu"></span>
+            </button>
         </div>
-        
-        <div class="collapse navbar-collapse justify-content-end">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)">
-                        <i class="material-icons">dashboard</i>
-                        <p class="d-lg-none d-md-block">
-                            Stats
-                        </p>
-                    </a>
-                </li>
-                
-                <a class="dropdown-item" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-        </ul>
     </div>
-</div>
+    <div class="navbar-menu-wrapper d-flex align-items-top"> 
+        <ul class="navbar-nav">
+            <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+                <h1 class="welcome-text">Fortuna</h1>
+            </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+        </button>
+    </div>
 </nav>
-<!-- End Navbar -->
