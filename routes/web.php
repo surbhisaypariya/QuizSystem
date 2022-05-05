@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\UserController;
+use App\Http\Controllers\admin\QuestionController;
+use App\Http\Controllers\admin\SubjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +28,20 @@ Route::get('password-set/{email}',[App\Http\Controllers\admin\UserController::cl
 Route::post('password-set-user',[App\Http\Controllers\admin\UserController::class,'password_set_user'])->name('password_set_user');
 
 Route::group(['middleware'=>['auth']],function(){
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::controller(UserController::class)->group(function(){
         Route::resource('/user',UserController::class);
         Route::post('ajax_fetchuser','ajax_fetchuser')->name('ajax_fetchuser');
         Route::post('change-multiple-status','change_multiple_status')->name('change_multiple_status');
+    });
+    
+    Route::controller(SubjectController::class)->group(function(){
+        Route::resource('/subject',SubjectController::class);
+        Route::post('ajax_fetchsubject','ajax_fetchsubject')->name('ajax_fetchsubject');
+    });
+    
+    Route::controller(QuestionController::class)->group(function(){
+        Route::resource('/question',QuestionController::class);
+        Route::post('ajax_fetchquestion','ajax_fetchquestion')->name('ajax_fetchquestion');
     });
 });
