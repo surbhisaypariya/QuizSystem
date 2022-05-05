@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
             $table->text('question');
-            $table->string('answer_1');
-            $table->string('answer_2');
-            $table->string('answer_3');
-            $table->string('answer_4');
-            $table->string('right_answer');
+            $table->string('option_1');
+            $table->string('option_2');
+            $table->string('option_3');
+            $table->string('option_4');
+            $table->string('answer');
             $table->integer('status')->comment('0 for disable , 1 for active')->default('1');
             $table->timestamps();
         });

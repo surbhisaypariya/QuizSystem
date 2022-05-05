@@ -6,13 +6,13 @@
         <div class="card-header">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>Subject Detail</h3>
+                    <h3>Question Detail</h3>
                 </div>
                 <div class="col-md-6">
                     
                 </div>
                 <div class="col-md-2">
-                    <a href="{{ route('subject.create') }}" class="btn btn-primary me-2">Add Subject</a> 
+                    <a href="{{ route('question.create') }}" class="btn btn-primary me-2">Add Question</a> 
                 </div>
             </div>
         </div>
@@ -21,8 +21,8 @@
             <table class="table table-striped" id="DataTable">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Questions</th>
+                        <th>Question</th>
+                        <th>Subject</th>
                         <th>Created At</th>
                         <th>Status</th>
                         <th>Action</th>   
@@ -39,7 +39,7 @@
         serverSide : true,
         ajax : {
             method : "post",
-            url : "{{ route('ajax_fetchsubject') }}",
+            url : "{{ route('ajax_fetchquestion') }}",
             data : {"_token":"{{ csrf_token() }}"},
         }, 
     });

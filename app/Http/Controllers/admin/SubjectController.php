@@ -152,6 +152,7 @@ class SubjectController extends Controller
         {
             $nested_data = array();
             $nested_data[] = $subject->name;
+            $nested_data[] = $subject->question->count();
             $nested_data[] = $subject->created_at->format('M d, Y h:i A');
             $nested_data[] = $subject->status == 1?"Active":"Disable";
             $nested_data[] = '
