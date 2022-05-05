@@ -23,6 +23,12 @@ class HomeController extends Controller
     */
     public function index()
     {
+        if(Auth::user()->role == 'student')
+        {
+            Auth::logout();
+            Session::flush();
+            return redirect('login')->with('error','Access Denied');
+        }
         return view('admin.dashboard');
     }
 }

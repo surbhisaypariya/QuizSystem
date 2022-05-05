@@ -6,17 +6,13 @@
         <div class="card-header">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>User Detail</h3>
+                    <h3>Subject Detail</h3>
                 </div>
-                <div class="col-md-4">
-                    <select id="change_status" class="form-control">
-                        <option selected disabled>Status</option>
-                        <option value="1">Active</option>
-                        <option value="0">Disable</option>
-                    </select>
+                <div class="col-md-6">
+                    
                 </div>
-                <div class="col-md-4">
-                    <a href="{{ route('user.create') }}" class="btn btn-primary me-2">Add User</a> 
+                <div class="col-md-2">
+                    <a href="{{ route('subject.create') }}" class="btn btn-primary me-2">Add Subject</a> 
                 </div>
             </div>
         </div>
@@ -25,10 +21,8 @@
             <table class="table table-striped" id="DataTable">
                 <thead>
                     <tr>
-                        <th></th>
                         <th>Name</th>
-                        <th>Role</th>
-                        <th>Last Active</th>
+                        <th>Created At</th>
                         <th>Status</th>
                         <th>Action</th>   
                     </tr>
@@ -44,7 +38,7 @@
         serverSide : true,
         ajax : {
             method : "post",
-            url : "{{ route('ajax_fetchuser') }}",
+            url : "{{ route('ajax_fetchsubject') }}",
             data : {"_token":"{{ csrf_token() }}"},
         }, 
     });
